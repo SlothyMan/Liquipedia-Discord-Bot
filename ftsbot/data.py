@@ -307,3 +307,7 @@ liquipedia_misspellings = (
 	'liquidpeia',
 	'liqupiedia',
 )
+
+name_patterns_to_report = (
+	'liqui',  # Catches both Liquid and Liquipedia since it's a pattern check not a word check
+)
