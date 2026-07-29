@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # License MIT
 # Copyright 2016-2026 Alex Winkler
 # Version 5.0.0
@@ -7,12 +5,11 @@
 from __future__ import annotations
 
 import asyncio
+from collections.abc import Callable
 from datetime import timedelta
-from typing import Callable
 
 import discord
 from discord import ui
-
 
 IMAGE_PREVIEW_LIMIT = 4
 FILE_LIST_LIMIT = 6
@@ -59,7 +56,7 @@ def display_name(user: discord.abc.User) -> str:
 
 def channel_label(channel: object) -> str:
 	if hasattr(channel, 'name'):
-		return '#' + getattr(channel, 'name')
+		return '#' + channel.name
 	return str(channel)
 
 
