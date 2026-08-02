@@ -54,7 +54,7 @@ class MediaWikiService:
 	def search_url(self, wiki: str, query: str) -> str:
 		encoded_query = urllib.parse.quote_plus(query)
 		return (
-			f'{data.wikibaseurl}{wiki}/Special%3ASearch&search={encoded_query}'
+			f'{data.wikibaseurl}{wiki}/Special:Search?search={encoded_query}'
 		)
 
 	async def _query(self, wiki: str, *, params: dict[str, Any]) -> dict[str, Any]:
